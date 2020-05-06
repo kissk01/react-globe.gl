@@ -9,7 +9,7 @@
   "types": "dist/react-globe.gl.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vasturiano/react-globe.gl.git"
+    "url": "git+https://github.com/kissk01/react-globe.gl.git"
   },
   "keywords": [
     "react",
