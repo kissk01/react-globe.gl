@@ -70907,16 +70907,6 @@
 
   	}
 
-  	function onCustomEvent(event) {
-      console.warn( 'customEvent dispatched.' )
-
-      scope.dispatchEvent( startEvent );
-
-      handleZoom( event );
-
-      scope.dispatchEvent( endEvent );
-    }
-
   	function mousedown( event ) {
 
   		if ( _this.enabled === false ) return;
@@ -71152,7 +71142,7 @@
 
   		window.removeEventListener( 'keydown', keydown, false );
   		window.removeEventListener( 'keyup', keyup, false );
-        // window.removeEventListener( 'customEvent', customEvent, false)
+
   	};
 
   	this.domElement.addEventListener( 'contextmenu', contextmenu, false );
@@ -71165,7 +71155,6 @@
 
   	window.addEventListener( 'keydown', keydown, false );
   	window.addEventListener( 'keyup', keyup, false );
-  	window.addEventListener( 'customEvent', onCustomEvent, false)
 
   	this.handleResize();
 
@@ -71710,11 +71699,6 @@
   		scope.update();
 
   	}
-
-    function handleZoom() {
-        dollyIn( getZoomScale() )
-        scope.update();
-    }
 
   	function handleMouseWheel( event ) {
 
@@ -72275,8 +72259,6 @@
   	scope.domElement.addEventListener( 'touchmove', onTouchMove, false );
 
   	scope.domElement.addEventListener( 'keydown', onKeyDown, false );
-
-    scope.domElement.addEventListener( 'customEvent', onCustomEvent, false );
 
   	// make sure element can receive keys.
 
