@@ -70912,7 +70912,7 @@
 
       scope.dispatchEvent( startEvent );
 
-      handleMouseWheel( event );
+      handleZoom( event );
 
       scope.dispatchEvent( endEvent );
     }
@@ -71710,6 +71710,11 @@
   		scope.update();
 
   	}
+
+    function handleZoom() {
+        dollyIn( getZoomScale() )
+        scope.update();
+    }
 
   	function handleMouseWheel( event ) {
 
